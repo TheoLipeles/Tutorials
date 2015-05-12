@@ -14,7 +14,18 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var counterLabel: UILabel!
     
+    @IBAction func decrement(sender: AnyObject) {
+        if (counter > 0) {
+            counter = counter - 1
+            updateCounterLabel()
+        }
+    }
    
+    @IBAction func reset(sender: AnyObject) {
+        counter = 0
+        updateCounterLabel()
+    }
+    
     @IBAction func increment(sender: AnyObject) {
         counter = counter + 1
         updateCounterLabel()

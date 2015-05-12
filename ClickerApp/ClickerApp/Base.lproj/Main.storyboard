@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
@@ -16,23 +16,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtN-Gm-URW">
-                                <rect key="frame" x="16" y="20" width="30" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtN-Gm-URW">
+                                <rect key="frame" x="269" y="33" width="63" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="63" id="9jk-on-w4r"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx1-E4-wlZ">
-                                <rect key="frame" x="16" y="49" width="30" height="30"/>
-                                <state key="normal" title="+">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sx1-E4-wlZ">
+                                <rect key="frame" x="200" y="62" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="XaD-sE-dq6"/>
+                                    <constraint firstAttribute="height" constant="200" id="ctX-2J-29O"/>
+                                </constraints>
+                                <state key="normal" title="+" image="plus">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="increment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bmp-0X-Cat"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqk-kv-DFU">
+                                <rect key="frame" x="250" y="270" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="NIG-ko-KVb"/>
+                                    <constraint firstAttribute="height" constant="100" id="gTs-p1-Yy9"/>
+                                </constraints>
+                                <state key="normal" title="-" image="minus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decrement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X3G-4u-afc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq4-lM-PCv">
+                                <rect key="frame" x="340" y="14" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="gJs-g2-JaJ"/>
+                                    <constraint firstAttribute="width" constant="100" id="hnT-Gw-mbv"/>
+                                </constraints>
+                                <state key="normal" title="Reset" image="reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ft9-jp-8ze"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tqk-kv-DFU" firstAttribute="top" secondItem="sx1-E4-wlZ" secondAttribute="bottom" constant="8" id="3Kd-UI-X7l"/>
+                            <constraint firstItem="FtN-Gm-URW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="A9b-za-ZhJ"/>
+                            <constraint firstAttribute="centerX" secondItem="FtN-Gm-URW" secondAttribute="centerX" constant="-0.5" id="Cbp-ex-JjH"/>
+                            <constraint firstItem="Cq4-lM-PCv" firstAttribute="leading" secondItem="FtN-Gm-URW" secondAttribute="trailing" constant="8" id="XE2-fu-SHH"/>
+                            <constraint firstItem="sx1-E4-wlZ" firstAttribute="centerX" secondItem="tqk-kv-DFU" secondAttribute="centerX" id="e69-w0-kJo"/>
+                            <constraint firstItem="Cq4-lM-PCv" firstAttribute="bottom" secondItem="FtN-Gm-URW" secondAttribute="bottom" id="l3k-ZG-Oib"/>
+                            <constraint firstItem="FtN-Gm-URW" firstAttribute="centerX" secondItem="sx1-E4-wlZ" secondAttribute="centerX" constant="0.5" id="m3V-iG-bgq"/>
+                            <constraint firstItem="sx1-E4-wlZ" firstAttribute="top" secondItem="FtN-Gm-URW" secondAttribute="bottom" constant="8" id="wbL-nQ-PBZ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="counterLabel" destination="FtN-Gm-URW" id="Yh4-8v-kW7"/>
@@ -43,4 +86,9 @@
             <point key="canvasLocation" x="357" y="320"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus" width="274" height="274"/>
+        <image name="plus" width="275" height="274"/>
+        <image name="reset" width="304" height="107"/>
+    </resources>
 </document>
